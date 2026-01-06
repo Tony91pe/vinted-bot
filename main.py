@@ -64,14 +64,14 @@ def invia_notifica(annuncio):
         bot.send_message(chat_id=CHAT_ID, text=messaggio, parse_mode=ParseMode.HTML)
 
 def main():
-while True:
-    try:
-        annunci = estrai_annunci()
-        for annuncio in annunci:
-          invia_notifica(annuncio)
-  except Exception as e:
-      print("Errore:", e)
-time.sleep(60)
+    while True:
+        try:
+            annunci = estrai_annunci()
+            for annuncio in annunci:
+                invia_notifica(annuncio)
+       except Exception as e:
+           print("Errore:", e)
+       time.sleep(60)
 
 if __name__ == "__main__":
     main()
