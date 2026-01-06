@@ -54,7 +54,7 @@ for item in items:
     })
     seen_links.add(url)
 
-        return risultati
+    return risultati
 
 def invia_notifica(annuncio):
     messaggio = f"📱 <b>{annuncio['titolo']}</b>\n💶 <b>{annuncio['prezzo']}</b>\n🔗 <a href=\"{annuncio['url']}\">Apri annuncio</a>\n\n🔧 <i>Segnalazione automatica Dolomiti Tech Lab</i>"
