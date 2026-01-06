@@ -20,19 +20,19 @@ bot = Bot(token=BOT_TOKEN)
 seen_links = set()
 
 def estrai_annunci():
-  headers = {"User-Agent": "Mozilla/5.0"}
-  response = requests.get(VINTED_URL, headers=headers)
-  soup = BeautifulSoup(response.text, "html.parser")
-  items = soup.select("div.feed-grid__item")
+    headers = {"User-Agent": "Mozilla/5.0"}
+    response = requests.get(VINTED_URL, headers=headers)
+    soup = BeautifulSoup(response.text, "html.parser")
+    items = soup.select("div.feed-grid__item")
 
 risultati = []
 for item in items:
     link_tag = item.select_one("a")
-    if not link_tag:
+if not link_tag:
         continue
 
     url = "https://www.vinted.it" + link_tag["href"]
-    if url in seen_links:
+if url in seen_links:
         continue
 
     titolo = item.select_one("h2")
