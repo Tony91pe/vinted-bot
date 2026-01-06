@@ -31,7 +31,7 @@ for item in items:
 if not link_tag:
         continue
 
-    url = "https://www.vinted.it" + link_tag["href"]
+     url = "https://www.vinted.it" + link_tag["href"]
 if url in seen_links:
         continue
 
