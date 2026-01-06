@@ -53,7 +53,6 @@ for item in items:
     "immagine": immagine
     })
     seen_links.add(url)
-
     return risultati
 
 def invia_notifica(annuncio):
