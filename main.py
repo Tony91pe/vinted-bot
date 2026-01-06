@@ -69,9 +69,9 @@ def main():
             annunci = estrai_annunci()
             for annuncio in annunci:
                 invia_notifica(annuncio)
-       except Exception as e:
+        except Exception as e:
            print("Errore:", e)
-       time.sleep(60)
+        time.sleep(60)
 
 if __name__ == "__main__":
     main()
