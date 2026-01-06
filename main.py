@@ -41,7 +41,7 @@ for item in items:
     
     testo = (titolo.text if titolo else "").lower()
     if not any(keyword in testo for keyword in KEYWORDS):
-    continue
+        continue
     
     immagine = immagine_tag["src"] if immagine_tag else None
     prezzo_text = prezzo.text.strip() if prezzo else "Prezzo non disponibile"
