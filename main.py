@@ -57,11 +57,11 @@ for item in items:
     return risultati
 
 def invia_notifica(annuncio):
-messaggio = f"📱 <b>{annuncio['titolo']}</b>\n💶 <b>{annuncio['prezzo']}</b>\n🔗 <a href=\"{annuncio['url']}\">Apri annuncio</a>\n\n🔧 <i>Segnalazione automatica Dolomiti Tech Lab</i>"
-if annuncio["immagine"]:
-bot.send_photo(chat_id=CHAT_ID, photo=annuncio["immagine"], caption=messaggio, parse_mode=ParseMode.HTML)
-else:
-bot.send_message(chat_id=CHAT_ID, text=messaggio, parse_mode=ParseMode.HTML)
+    messaggio = f"📱 <b>{annuncio['titolo']}</b>\n💶 <b>{annuncio['prezzo']}</b>\n🔗 <a href=\"{annuncio['url']}\">Apri annuncio</a>\n\n🔧 <i>Segnalazione automatica Dolomiti Tech Lab</i>"
+    if annuncio["immagine"]:
+        bot.send_photo(chat_id=CHAT_ID, photo=annuncio["immagine"], caption=messaggio, parse_mode=ParseMode.HTML)
+    else:
+        bot.send_message(chat_id=CHAT_ID, text=messaggio, parse_mode=ParseMode.HTML)
 
 def main():
 while True:
